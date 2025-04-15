@@ -849,6 +849,10 @@ onMounted(() => {
   overflow: hidden;
 }
 
+.dark .contact-card{
+  background-color: var(--white);
+}
+
 .contact-card::before {
   content: '';
   position: absolute;
@@ -873,6 +877,10 @@ onMounted(() => {
 
 .contact-text {
   color: var(--white);
+}
+
+.dark .contact-text h2 {
+  color: white;
 }
 
 .contact-text h2 {

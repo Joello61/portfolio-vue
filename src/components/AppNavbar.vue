@@ -12,6 +12,11 @@
         <router-link to="/projects" class="navbar-item" @click="closeMenu">Projets</router-link>
         <router-link to="/experience" class="navbar-item" @click="closeMenu">Expérience</router-link>
         <router-link to="/contact" class="navbar-item" @click="closeMenu">Contact</router-link>
+        <button @click="emit('toggle-dark')" class="toggle-mode-btn"
+          :aria-label="isDark ? 'Mode clair' : 'Mode sombre'">
+          <i :class="isDark ? 'fas fa-sun' : 'fas fa-moon'"></i>
+        </button>
+
       </div>
       <div class="navbar-burger" @click="toggleMenu" :class="{ 'active': menuActive }">
         <span></span>
@@ -24,6 +29,13 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { defineEmits, defineProps } from 'vue'
+
+const emit = defineEmits(['toggle-dark'])
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  isDark: Boolean
+})
 
 // État réactif
 const menuActive = ref(false)
@@ -57,8 +69,8 @@ onUnmounted(() => {
 
 <style scoped>
 .navbar {
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -68,8 +80,9 @@ onUnmounted(() => {
 
 .navbar.scrolled {
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: var(--white);
+  /* toujours variable */
+  box-shadow: var(--shadow-md);
 }
 
 .navbar-container {
@@ -108,7 +121,7 @@ onUnmounted(() => {
   font-weight: 500;
   position: relative;
   padding: 5px 0;
-  transition: color 0.3s ease;
+  transition: color var(--transition-fast);
 }
 
 .navbar-item::after {
@@ -119,14 +132,16 @@ onUnmounted(() => {
   bottom: 0;
   left: 0;
   background-color: var(--primary-color);
-  transition: width 0.3s ease;
+  transition: width var(--transition-fast);
 }
 
-.navbar-item:hover, .router-link-active {
+.navbar-item:hover,
+.router-link-active {
   color: var(--primary-color);
 }
 
-.navbar-item:hover::after, .router-link-active::after {
+.navbar-item:hover::after,
+.router-link-active::after {
   width: 100%;
 }
 
@@ -145,7 +160,7 @@ onUnmounted(() => {
   width: 100%;
   height: 2px;
   background-color: var(--text-dark);
-  transition: all 0.3s ease;
+  transition: all var(--transition-fast);
 }
 
 .navbar-burger.active span:nth-child(1) {
@@ -162,6 +177,32 @@ onUnmounted(() => {
   background-color: var(--primary-color);
 }
 
+.toggle-mode-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.toggle-mode-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.dark .toggle-mode-btn {
+  color: white;
+  border-color: var(--primary-color)
+}
+
+
 @media (max-width: 768px) {
   .navbar-menu {
     position: fixed;
@@ -176,13 +217,14 @@ onUnmounted(() => {
     align-items: flex-start;
     transition: right 0.4s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    /* tu peux créer var(--shadow-right) si besoin */
     z-index: 101;
   }
 
   .navbar-menu.active {
     right: 0;
   }
-  
+
   .navbar-menu .navbar-item {
     font-size: 1.1rem;
     margin: 10px 0;

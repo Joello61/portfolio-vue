@@ -42,16 +42,16 @@
   .skill-item {
     display: flex;
     margin-bottom: 25px;
-    background: #fff;
+    background: var(--white);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
   
   .skill-icon {
@@ -60,7 +60,7 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: #42b983;
+    color: var(--primary-color);
     margin-right: 15px;
   }
   
@@ -71,12 +71,12 @@
   .skill-name {
     margin-bottom: 10px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-dark);
   }
   
   .skill-level {
     height: 8px;
-    background-color: #e9ecef;
+    background-color: var(--accent-color);
     border-radius: 4px;
     margin-bottom: 10px;
     overflow: hidden;
@@ -84,13 +84,14 @@
   
   .skill-progress {
     height: 100%;
-    background-color: #42b983;
+    background-color: var(--primary-color);
     border-radius: 4px;
     transition: width 1s ease-in-out;
   }
   
   .skill-description {
-    color: #6c757d;
+    color: var(--text-light);
     font-size: 0.9rem;
   }
   </style>
+  

@@ -55,10 +55,10 @@
   
   <style scoped>
   .project-card {
-    background: #fff;
+    background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s, box-shadow 0.3s;
     height: 100%;
     display: flex;
@@ -67,7 +67,7 @@
   
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
   
   .project-image {
@@ -89,11 +89,11 @@
   .project-placeholder {
     width: 100%;
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: var(--background-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
+    color: var(--text-light);
   }
   
   .project-content {
@@ -106,7 +106,7 @@
   .project-title {
     margin-bottom: 10px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-dark);
   }
   
   .project-tags {
@@ -117,8 +117,8 @@
   }
   
   .project-tag {
-    background-color: #e9ecef;
-    color: #495057;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -126,7 +126,7 @@
   }
   
   .project-description {
-    color: #6c757d;
+    color: var(--text-light);
     margin-bottom: 20px;
     flex: 1;
   }
@@ -149,20 +149,21 @@
   }
   
   .project-link.demo {
-    background-color: #42b983;
-    color: white;
-  }
-  
-  .project-link.code {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
   }
   
   .project-link.demo:hover {
-    background-color: #3aa876;
+    background-color: var(--primary-dark);
+  }
+  
+  .project-link.code {
+    background-color: var(--secondary-dark);
+    color: var(--white);
   }
   
   .project-link.code:hover {
-    background-color: #222;
+    background-color: var(--text-dark);
   }
   </style>
+  

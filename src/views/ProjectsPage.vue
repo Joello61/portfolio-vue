@@ -14,7 +14,7 @@
       <div class="header-pattern"></div>
       <div class="header-wave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#ffffff" fill-opacity="1"
+          <path fill="currentColor" fill-opacity="1"
             d="M0,192L48,181.3C96,171,192,149,288,154.7C384,160,480,192,576,213.3C672,235,768,245,864,218.7C960,192,1056,128,1152,106.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
           </path>
         </svg>
@@ -341,6 +341,7 @@ watch(searchQuery, () => {
 }
 
 .header-wave {
+  color: var(--white);
   position: absolute;
   bottom: -2px;
   left: 0;
