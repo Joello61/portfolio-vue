@@ -99,7 +99,7 @@ onMounted(() => {
 }
 
 .dark .header-wave {
-  color: var(--background-light); /* ou une autre couleur sombre */
+  color: var(--background-light);
 }
 
 
@@ -166,14 +166,14 @@ a:hover {
 .main-content {
   flex: 1;
   padding: var(--spacing-lg);
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
   width: 100%;
 }
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
@@ -230,8 +230,6 @@ a:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-sm);
 }
-
-
 
 /* Animations de transition entre les pages */
 .fade-enter-active,

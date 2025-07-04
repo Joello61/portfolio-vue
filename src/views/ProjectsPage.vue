@@ -149,7 +149,7 @@ const projects = reactive([
     id: 1,
     title: 'Plateforme d\'accès aux soins de santé',
     description: 'Application web et backend permettant de faciliter l\'accès aux soins de santé pour tous (bocobi).',
-    image: '',
+    image: 'images/bocobi.png',
     category: 'Fullstack',
     tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
     demoLink: 'https://github.com/Joello61/bocobiWeb',
@@ -159,7 +159,7 @@ const projects = reactive([
     id: 2,
     title: 'Plateforme de financement participatif',
     description: 'Solution de crowdfunding permettant de connecter porteurs de projets et investisseurs (WeFund).',
-    image: '',
+    image: 'images/wefund.png',
     category: 'Fullstack',
     tags: ['Vue.js', 'Node.js', 'MongoDB'],
     demoLink: 'https://github.com/Joello61/wefundWeb',
@@ -169,7 +169,7 @@ const projects = reactive([
     id: 3,
     title: 'Plateforme de gestion intégrée',
     description: 'Système de gestion complet incluant gestion des ressources, comptabilité et suivi de projets.',
-    image: '',
+    image: 'images/pgi.png',
     category: 'Fullstack',
     tags: ['Vue.js', 'Spring Boot', 'PostgreSQL'],
     demoLink: 'https://github.com/Joello61/PGI-Web',
@@ -189,7 +189,7 @@ const projects = reactive([
     id: 5,
     title: 'Application de gestion d\'événements',
     description: 'Plateforme frontend permettant de créer, gérer et promouvoir des événements (EventHive).',
-    image: '',
+    image: 'images/eventhive.png',
     category: 'Frontend',
     tags: ['Vue.js', 'Vuex', 'CSS3'],
     demoLink: 'https://github.com/Joello61/eventHiveFront',
@@ -207,23 +207,33 @@ const projects = reactive([
   },
   {
     id: 7,
-    title: 'Application Météo Vue.js',
-    description: 'Application météo interactive développée avec Vue.js et une API météorologique.',
-    image: '',
-    category: 'Frontend',
-    tags: ['Vue.js', 'API REST', 'CSS3'],
-    demoLink: 'https://github.com/Joello61/vue-weather-app-main',
-    codeLink: 'https://github.com/Joello61/vue-weather-app-main'
-  },
-  {
-    id: 8,
     title: 'Gestionnaire de tâches',
     description: 'Application web de gestion de tâches et de projets avec frontend et backend.',
-    image: '',
+    image: 'images/taskflow.png',
     category: 'Fullstack',
     tags: ['Vue.js', 'Node.js', 'MongoDB'],
     demoLink: 'https://github.com/Joello61/frontend_task_flow',
     codeLink: 'https://github.com/Joello61/backend_task_flow2'
+  },
+  {
+    id: 8,
+    title: 'Exploratory website',
+    description: 'Application web de présentation ludique de mon parcours, mes compétences et mes expériences.',
+    image: 'images/exploratory.png',
+    category: 'Frontend',
+    tags: ['Angular'],
+    demoLink: 'https://exploratory-website.vercel.app/',
+    codeLink: 'https://github.com/Joello61/exploratory-website.git'
+  },
+  {
+    id: 9,
+    title: 'Brulage Dashboard',
+    description: 'Interface de suivi des opérations de brulage dans les pyrenées, permettant de visualiser les données et statisqtiques.',
+    image: 'images/brulage.png',
+    category: 'Fullstack',
+    tags: ['React', 'PostgreSQL', 'Symfony', 'API REST', 'Python'],
+    demoLink: 'https://github.com/Joello61/brulage-dashboard.git',
+    codeLink: 'https://github.com/Joello61/brulage-dashboard.git'
   }
 ])
 
@@ -271,10 +281,8 @@ const resetFilters = () => {
 
 // Animations avec GSAP
 onMounted(() => {
-  // Réinitialiser toute animation existante pour éviter des états intermédiaires
   gsap.set('.project-item', { clearProps: 'all' });
   
-  // Puis appliquer une nouvelle animation
   gsap.from('.project-item', {
     opacity: 0,
     y: 20,
@@ -282,7 +290,6 @@ onMounted(() => {
     stagger: 0.1,
     ease: 'power2.out',
     onComplete: () => {
-      // S'assurer que toutes les cartes sont à opacité 1 à la fin
       gsap.set('.project-item', { opacity: 1, y: 0 });
     }
   });
@@ -302,7 +309,7 @@ onMounted(() => {
   }, 10)
 }
 
-// Watchers correctement appliqués
+// Watchers
 watch(currentFilter, () => {
   animateProjects()
 })
@@ -522,17 +529,17 @@ watch(searchQuery, () => {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   gap: 30px;
 }
 
 .project-item {
   height: 100%;
   transition: all 0.3s ease;
-  opacity: 1 !important; /* Garantit que l'opacité est toujours à 1 */
+  opacity: 1 !important;
 }
 
-/* Assurez-vous que les transitions de liste sont bien définies */
+
 .projects-list-enter-active,
 .projects-list-leave-active {
   transition: all 0.3s ease;

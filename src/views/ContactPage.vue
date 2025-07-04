@@ -280,7 +280,7 @@ const activeFaq = ref(null);
 
 // Méthodes
 emailjs.init({
-  publicKey: 'RU8lgd8RpyJD-fkwd', // remplace par ta vraie clé publique
+  publicKey: 'RU8lgd8RpyJD-fkwd', 
   blockHeadless: true
 })
 

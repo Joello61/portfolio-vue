@@ -12,10 +12,10 @@
         <p class="project-description">{{ description }}</p>
         <div class="project-links">
           <a v-if="demoLink" :href="demoLink" target="_blank" rel="noopener noreferrer" class="project-link demo">
-            <i class="fa fa-external-link"></i> Voir le site
+            <i class="fas fa-external-link-alt"></i> Voir le site
           </a>
           <a v-if="codeLink" :href="codeLink" target="_blank" rel="noopener noreferrer" class="project-link code">
-            <i class="fa fa-github"></i> Voir le code
+            <i class="fab fa-github"></i> Voir le code
           </a>
         </div>
       </div>
@@ -23,7 +23,6 @@
   </template>
   
   <script setup>
-  // Props avec définition
   // eslint-disable-next-line no-undef
   defineProps({
     title: {
@@ -71,7 +70,7 @@
   }
   
   .project-image {
-    height: 200px;
+    height: 400px;
     overflow: hidden;
   }
   

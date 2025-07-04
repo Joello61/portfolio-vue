@@ -3,19 +3,19 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-info">
-            <h3>Votre Nom</h3>
+            <h3>Tchinda Tchoffo Timothée Joël</h3>
             <p>Développeur Fullstack Passionné</p>
           </div>
           <div class="footer-links">
             <div class="social-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/joel-tchinda" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Joello61" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i>
+              <a href="mailto:tchindajoel61@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
               </a>
             </div>
           </div>

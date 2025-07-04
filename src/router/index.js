@@ -9,7 +9,6 @@ const routes = [
   {
     path: '/skills',
     name: 'Skills',
-    // Chargement paresseux pour optimiser les performances
     component: () => import('../views/SkillsPage.vue')
   },
   {
@@ -27,7 +26,6 @@ const routes = [
     name: 'Contact',
     component: () => import('../views/ContactPage.vue')
   },
-  // Route de redirection pour les pages non trouvées
   {
     path: '/:pathMatch(.*)*',
     redirect: '/'
@@ -37,7 +35,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  // Scroll en haut lors du changement de page
   scrollBehavior() {
     return { top: 0 }
   }
