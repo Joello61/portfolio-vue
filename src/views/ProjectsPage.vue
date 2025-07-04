@@ -93,7 +93,7 @@
               :imageSrc="project.image"
               :tags="project.tags"
               :demoLink="project.demoLink"
-              :codeLink="project.codeLink"
+              :codeLinks="project.codeLinks"
             />
           </div>
         </transition-group>
@@ -147,94 +147,133 @@ const searchQuery = ref('')
 const projects = reactive([
   {
     id: 1,
-    title: 'Plateforme d\'accès aux soins de santé',
-    description: 'Application web et backend permettant de faciliter l\'accès aux soins de santé pour tous (bocobi).',
-    image: 'images/bocobi.png',
-    category: 'Fullstack',
-    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
-    demoLink: 'https://github.com/Joello61/bocobiWeb',
-    codeLink: 'https://github.com/Joello61/bocobiBackend'
-  },
-  {
-    id: 2,
-    title: 'Plateforme de financement participatif',
-    description: 'Solution de crowdfunding permettant de connecter porteurs de projets et investisseurs (WeFund).',
-    image: 'images/wefund.png',
-    category: 'Fullstack',
-    tags: ['Angular', 'Node.js', 'PostgreSQL'],
-    demoLink: 'https://github.com/Joello61/wefundWeb',
-    codeLink: 'https://github.com/Joello61/wefundBackend'
-  },
-  {
-    id: 3,
-    title: 'Plateforme de gestion intégrée',
-    description: 'Système de gestion complet incluant gestion des ressources, comptabilité et suivi de projets.',
-    image: 'images/pgi.png',
-    category: 'Fullstack',
-    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
-    demoLink: 'https://github.com/Joello61/PGI-Web',
-    codeLink: 'https://github.com/Joello61/PGI-Backend'
-  },
-  {
-    id: 4,
-    title: 'Africa Digital Marketing Agency',
-    description: 'Site Web pour une agence de marketing numérique africaine, présentant services et portfolio.',
-    image: '',
-    category: 'Frontend',
-    tags: ['Angular', 'CSS3', 'Responsive'],
-    demoLink: 'https://github.com/Joello61/Africa-Digital-Marketing-Agency-Website',
-    codeLink: 'https://github.com/Joello61/Africa-Digital-Marketing-Agency-Website'
-  },
-  {
-    id: 5,
-    title: 'Application de gestion d\'événements',
-    description: 'Plateforme fullstack permettant de créer, gérer et promouvoir des événements (EventHive).',
-    image: 'images/eventhive.png',
-    category: 'Fullstack',
-    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
-    demoLink: 'https://github.com/Joello61/eventHiveFront',
-    codeLink: 'https://github.com/Joello61/eventHiveFront'
-  },
-  {
-    id: 6,
-    title: 'Plateforme d\'aide à l\'autonomie à domicile',
-    description: 'Application mobile dédiée à l\'assistance des personnes en perte d\'autonomie.',
-    image: '',
-    category: 'Mobile',
-    tags: ['Flutter', 'Firebase', 'REST API'],
-    demoLink: 'https://github.com/Joello61/paadMobile',
-    codeLink: 'https://github.com/Joello61/paadMobile'
-  },
-  {
-    id: 7,
-    title: 'Gestionnaire de tâches',
-    description: 'Application web de gestion de tâches et de projets avec frontend et backend.',
-    image: 'images/taskflow.png',
-    category: 'Fullstack',
-    tags: ['Vue.js', 'Symfony', 'MySQL'],
-    demoLink: 'https://github.com/Joello61/frontend_task_flow',
-    codeLink: 'https://github.com/Joello61/backend_task_flow2'
-  },
-  {
-    id: 8,
     title: 'Exploratory website',
     description: 'Application web de présentation ludique de mon parcours, mes compétences et mes expériences.',
     image: 'images/exploratory.png',
     category: 'Frontend',
     tags: ['Angular'],
     demoLink: 'https://exploratory-website.vercel.app/',
-    codeLink: 'https://github.com/Joello61/exploratory-website.git'
+    codeLinks: [{frontend : 'https://github.com/Joello61/exploratory-website.git'}]
   },
   {
-    id: 9,
+    id: 2,
     title: 'Brulage Dashboard',
     description: 'Interface de suivi des opérations de brulage dans les pyrenées, permettant de visualiser les données et statisqtiques.',
     image: 'images/brulage.png',
     category: 'Fullstack',
     tags: ['React', 'PostgreSQL', 'Symfony', 'API REST', 'Python'],
     demoLink: 'https://github.com/Joello61/brulage-dashboard.git',
-    codeLink: 'https://github.com/Joello61/brulage-dashboard.git'
-  }
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/brulage-dashboard.git',
+        backend : '',
+        other : ''
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: 'Gestionnaire de tâches',
+    description: 'Application web de gestion de tâches et de projets avec frontend et backend.',
+    image: 'images/taskflow.png',
+    category: 'Fullstack',
+    tags: ['Vue.js', 'Symfony', 'MySQL'],
+    demoLink: 'https://github.com/Joello61/frontend_task_flow',
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/frontend_task_flow',
+        backend : 'https://github.com/Joello61/backend_task_flow2'
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: 'Application de gestion d\'événements',
+    description: 'Plateforme fullstack permettant de créer, gérer et promouvoir des événements (EventHive).',
+    image: 'images/eventhive.png',
+    category: 'Fullstack',
+    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
+    demoLink: 'https://github.com/Joello61/eventHiveFront',
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/eventHiveFront',
+        backend : 'https://github.com/Joello61/eventHiveFront'
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: 'Plateforme de financement participatif',
+    description: 'Solution de crowdfunding permettant de connecter porteurs de projets et investisseurs (WeFund).',
+    image: 'images/wefund.png',
+    category: 'Fullstack',
+    tags: ['Angular', 'Node.js', 'PostgreSQL'],
+    demoLink: 'https://github.com/Joello61/wefundWeb',
+    codeLinks: [
+      {
+        backend : 'https://github.com/Joello61/wefundBackend',
+        frontend : 'https://github.com/Joello61/wefundWeb'
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: 'Plateforme de gestion intégrée',
+    description: 'Système de gestion complet incluant gestion des ressources, comptabilité et suivi de projets.',
+    image: 'images/pgi.png',
+    category: 'Fullstack',
+    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
+    demoLink: 'https://github.com/Joello61/PGI-Web',
+    codeLinks: [
+      {
+        backend : 'https://github.com/Joello61/PGI-Backend',
+        frontend : 'https://github.com/Joello61/PGI-Web'
+      }
+    ]
+  },
+  {
+    id: 7,
+    title: 'Plateforme d\'accès aux soins de santé',
+    description: 'Application web et backend permettant de faciliter l\'accès aux soins de santé pour tous (bocobi).',
+    image: 'images/bocobi.png',
+    category: 'Fullstack',
+    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
+    demoLink: 'https://github.com/Joello61/bocobiWeb',
+    codeLinks: [
+      {
+        backend : 'https://github.com/Joello61/bocobiBackend',
+        frontend : 'https://github.com/Joello61/bocobiWeb'
+      }
+    ]
+  },
+  {
+    id: 8,
+    title: 'Plateforme d\'aide à l\'autonomie à domicile',
+    description: 'Application mobile dédiée à l\'assistance des personnes en perte d\'autonomie.',
+    image: '',
+    category: 'Mobile',
+    tags: ['Flutter', 'Firebase', 'REST API'],
+    demoLink: 'https://github.com/Joello61/paadMobile',
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/paadMobile'
+      }
+    ]
+  },
+  {
+    id: 9,
+    title: 'Africa Digital Marketing Agency',
+    description: 'Site Web pour une agence de marketing numérique africaine, présentant services et portfolio.',
+    image: '',
+    category: 'Frontend',
+    tags: ['Angular', 'CSS3', 'Responsive'],
+    demoLink: 'https://github.com/Joello61/Africa-Digital-Marketing-Agency-Website',
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/Africa-Digital-Marketing-Agency-Website'
+      }
+    ]
+  },
 ])
 
 // Propriétés calculées
