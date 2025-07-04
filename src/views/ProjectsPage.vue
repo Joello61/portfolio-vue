@@ -161,7 +161,7 @@ const projects = reactive([
     description: 'Solution de crowdfunding permettant de connecter porteurs de projets et investisseurs (WeFund).',
     image: 'images/wefund.png',
     category: 'Fullstack',
-    tags: ['Vue.js', 'Node.js', 'MongoDB'],
+    tags: ['Angular', 'Node.js', 'PostgreSQL'],
     demoLink: 'https://github.com/Joello61/wefundWeb',
     codeLink: 'https://github.com/Joello61/wefundBackend'
   },
@@ -171,7 +171,7 @@ const projects = reactive([
     description: 'Système de gestion complet incluant gestion des ressources, comptabilité et suivi de projets.',
     image: 'images/pgi.png',
     category: 'Fullstack',
-    tags: ['Vue.js', 'Spring Boot', 'PostgreSQL'],
+    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
     demoLink: 'https://github.com/Joello61/PGI-Web',
     codeLink: 'https://github.com/Joello61/PGI-Backend'
   },
@@ -188,10 +188,10 @@ const projects = reactive([
   {
     id: 5,
     title: 'Application de gestion d\'événements',
-    description: 'Plateforme frontend permettant de créer, gérer et promouvoir des événements (EventHive).',
+    description: 'Plateforme fullstack permettant de créer, gérer et promouvoir des événements (EventHive).',
     image: 'images/eventhive.png',
-    category: 'Frontend',
-    tags: ['Vue.js', 'Vuex', 'CSS3'],
+    category: 'Fullstack',
+    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
     demoLink: 'https://github.com/Joello61/eventHiveFront',
     codeLink: 'https://github.com/Joello61/eventHiveFront'
   },
@@ -211,7 +211,7 @@ const projects = reactive([
     description: 'Application web de gestion de tâches et de projets avec frontend et backend.',
     image: 'images/taskflow.png',
     category: 'Fullstack',
-    tags: ['Vue.js', 'Node.js', 'MongoDB'],
+    tags: ['Vue.js', 'Symfony', 'MySQL'],
     demoLink: 'https://github.com/Joello61/frontend_task_flow',
     codeLink: 'https://github.com/Joello61/backend_task_flow2'
   },
