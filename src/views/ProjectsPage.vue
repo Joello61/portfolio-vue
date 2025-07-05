@@ -260,20 +260,6 @@ const projects = reactive([
       }
     ]
   },
-  {
-    id: 9,
-    title: 'Africa Digital Marketing Agency',
-    description: 'Site Web pour une agence de marketing numérique africaine, présentant services et portfolio.',
-    image: '',
-    category: 'Frontend',
-    tags: ['Angular', 'CSS3', 'Responsive'],
-    demoLink: 'https://github.com/Joello61/Africa-Digital-Marketing-Agency-Website',
-    codeLinks: [
-      {
-        frontend : 'https://github.com/Joello61/Africa-Digital-Marketing-Agency-Website'
-      }
-    ]
-  },
 ])
 
 // Propriétés calculées
