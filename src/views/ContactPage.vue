@@ -59,7 +59,7 @@
                 </div>
                 <div class="item-content">
                   <h3>Téléphone</h3>
-                  <p>07 52 89 20 73</p>
+                  <p>+33 07 52 89 20 73</p>
                   <a href="tel:+33752892073" class="item-link">
                     <span>M'appeler</span>
                     <i class="fas fa-arrow-right"></i>

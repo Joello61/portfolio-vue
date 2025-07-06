@@ -160,14 +160,14 @@
           <h2 class="section-title">Projets sélectionnés</h2>
         </div>
         <div class="projects-preview">
-          <div v-for="(project, index) in featuredProjects" :key="index" class="project-item" >
+          <div v-for="project in featuredProjects" :key="project.id" class="project-item" >
             <ProjectCard 
               :title="project.title" 
               :description="project.description"
               :imageSrc="project.image"
               :tags="project.tags"
               :demoLink="project.demoLink"
-              :codeLink="project.codeLink"
+              :codeLinks="project.codeLinks"
             />
           </div>
         </div>
@@ -270,29 +270,58 @@ const featuredSkills = reactive([
 // Données pour les projets en vedette
 const featuredProjects = reactive([
   {
-    title: 'Plateforme d\'accès aux soins de santé',
-    description: 'Application web et backend permettant de faciliter l\'accès aux soins de santé pour tous.',
-    image: '',
-    tags: ['Angular', 'Spring Boot', 'PostgreSQL'],
-    demoLink: 'https://github.com/Joello61/bocobiWeb',
-    codeLink: 'https://github.com/Joello61/bocobiBackend'
+    id: 1,
+    title: 'Exploratory website',
+    description: 'Application web de présentation ludique de mon parcours, mes compétences et mes expériences.',
+    image: 'images/exploratory.png',
+    category: 'Frontend',
+    tags: ['Angular'],
+    demoLink: 'https://exploratory-website.vercel.app/',
+    codeLinks: [{frontend : 'https://github.com/Joello61/exploratory-website.git'}]
   },
   {
-    title: 'Plateforme de financement participatif',
-    description: 'Solution de crowdfunding permettant de connecter porteurs de projets et investisseurs.',
-    image: '',
-    tags: ['Vue.js', 'Node.js', 'MongoDB'],
-    demoLink: 'https://github.com/Joello61/wefundWeb',
-    codeLink: 'https://github.com/Joello61/wefundBackend'
-  },
-  {
-    title: 'Plateforme de gestion intégrée',
-    description: 'Système de gestion complet incluant gestion des ressources, comptabilité et suivi de projets.',
-    image: '',
+    id: 2,
+    title: 'Brulage Dashboard',
+    description: 'Interface de suivi des opérations de brulage dans les pyrenées, permettant de visualiser les données et statisqtiques.',
+    image: 'images/brulage.png',
     category: 'Fullstack',
-    tags: ['Vue.js', 'Spring Boot', 'PostgreSQL'],
-    demoLink: 'https://github.com/Joello61/PGI-Web',
-    codeLink: 'https://github.com/Joello61/PGI-Backend'
+    tags: ['React', 'PostgreSQL', 'Symfony', 'API REST', 'Python'],
+    demoLink: 'https://github.com/Joello61/brulage-dashboard.git',
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/brulage-dashboard.git',
+        backend : '',
+        other : ''
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: 'Job Tracker',
+    description: 'Application de suivi des candidatures, avec gestion des statuts, des entretiens, des documents de candidature et des notes.',
+    image: 'images/jobtracker.png',
+    category: 'Fullstack',
+    tags: ['React.js', 'Express.js', 'PostgreSQL', 'Tailwind CSS', 'Api REST'],
+    demoLink: 'https://github.com/Joello61/job-tracker-frontend.git',
+    codeLinks: [{
+      frontend : 'https://github.com/Joello61/job-tracker-frontend.git',
+      backend : 'https://github.com/Joello61/job-tracker-backend.git'
+    }]
+  },
+  {
+    id: 4,
+    title: 'Gestionnaire de tâches',
+    description: 'Application web de gestion de tâches et de projets avec frontend et backend.',
+    image: 'images/taskflow.png',
+    category: 'Fullstack',
+    tags: ['Vue.js', 'Symfony', 'MySQL'],
+    demoLink: 'https://github.com/Joello61/frontend_task_flow',
+    codeLinks: [
+      {
+        frontend : 'https://github.com/Joello61/frontend_task_flow',
+        backend : 'https://github.com/Joello61/backend_task_flow2'
+      }
+    ]
   },
 ])
 
@@ -807,7 +836,7 @@ onMounted(() => {
 /* Projects Section */
 .projects-preview {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   gap: 30px;
   margin-bottom: 50px;
 }
