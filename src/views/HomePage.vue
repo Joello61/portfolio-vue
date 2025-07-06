@@ -91,10 +91,6 @@
                 <span class="stat-value">{{ stats.years }}+</span>
                 <span class="stat-label">Années d'expérience</span>
               </div>
-              <div class="stat-item">
-                <span class="stat-value">{{ stats.clients }}+</span>
-                <span class="stat-label">Clients satisfaits</span>
-              </div>
             </div>
             <router-link to="/experience" class="btn btn-outline">
               <span class="btn-text">Mon parcours</span>
@@ -213,9 +209,8 @@ const nameText = ref(null)
 
 // Données pour les statistiques
 const stats = reactive({
-  projects: 15,
+  projects: 9,
   years: 3,
-  clients: 5
 })
 
 // Données pour les icônes tech du hero
