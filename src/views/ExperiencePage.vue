@@ -62,7 +62,7 @@
                 <div class="card-header">
                   <h3 class="job-title">Alternant Développeur Fullstack</h3>
                   <div class="company-info">
-                    <span class="company-name">Arthur Ngaku (ANG Tech)</span>
+                    <span class="company-name">ANG Tech</span>
                     <span class="job-location">Marseille - Contrat d'apprentissage</span>
                   </div>
                 </div>
