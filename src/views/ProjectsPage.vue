@@ -173,6 +173,19 @@ const projects = reactive([
   },
   {
     id: 3,
+    title: 'Job Tracker',
+    description: 'Application de suivi des candidatures, avec gestion des statuts, des entretiens, des documents de candidature et des notes.',
+    image: 'images/jobtracker.png',
+    category: 'Fullstack',
+    tags: ['React.js', 'Express.js', 'PostgreSQL', 'Tailwind CSS', 'Api REST'],
+    demoLink: 'https://github.com/Joello61/job-tracker-frontend.git',
+    codeLinks: [{
+      frontend : 'https://github.com/Joello61/job-tracker-frontend.git',
+      backend : 'https://github.com/Joello61/job-tracker-backend.git'
+    }]
+  },
+  {
+    id: 4,
     title: 'Gestionnaire de tâches',
     description: 'Application web de gestion de tâches et de projets avec frontend et backend.',
     image: 'images/taskflow.png',
@@ -187,7 +200,7 @@ const projects = reactive([
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'Application de gestion d\'événements',
     description: 'Plateforme fullstack permettant de créer, gérer et promouvoir des événements (EventHive).',
     image: 'images/eventhive.png',
@@ -202,7 +215,7 @@ const projects = reactive([
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Plateforme de financement participatif',
     description: 'Solution de crowdfunding permettant de connecter porteurs de projets et investisseurs (WeFund).',
     image: 'images/wefund.png',
@@ -217,7 +230,7 @@ const projects = reactive([
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: 'Plateforme de gestion intégrée',
     description: 'Système de gestion complet incluant gestion des ressources, comptabilité et suivi de projets.',
     image: 'images/pgi.png',
@@ -232,7 +245,7 @@ const projects = reactive([
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: 'Plateforme d\'accès aux soins de santé',
     description: 'Application web et backend permettant de faciliter l\'accès aux soins de santé pour tous (bocobi).',
     image: 'images/bocobi.png',
@@ -247,7 +260,7 @@ const projects = reactive([
     ]
   },
   {
-    id: 8,
+    id: 9,
     title: 'Plateforme d\'aide à l\'autonomie à domicile',
     description: 'Application mobile dédiée à l\'assistance des personnes en perte d\'autonomie.',
     image: '',
