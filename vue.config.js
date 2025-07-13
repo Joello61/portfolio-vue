@@ -6,10 +6,10 @@ module.exports = defineConfig({
 
   pages: {
     index: {
-      entry: 'src/main.js',              // ou main.ts si TypeScript
+      entry: 'src/main.js',
       template: 'public/index.html',
       filename: 'index.html',
-      title: 'Portfolio Joeltech',       // 🎯 ICI ton titre
+      title: process.env.NODE_ENV === 'production' ? 'Portfolio Joel' : 'Dev – Portfolio Joel',
     }
   },
 
